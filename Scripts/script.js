@@ -1,5 +1,5 @@
 // Initialize the map and set its view to Merced, California's coordinates
-var map = L.map('map').setView([37.3021, -120.4820], 10); // Merced coordinates
+var map = L.map('map').setView([37.3021, -120.4820], 8); // Merced coordinates
 
 // Add tile layer (map background)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
