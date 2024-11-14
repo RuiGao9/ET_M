@@ -6,17 +6,17 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
 }).addTo(map);
 
-// Load GeoJSON data for boundary layers
-var geojsonLayer = new L.GeoJSON.AJAX("script/geojson/boundary.geojson", {
+// Load Madera county GeoJSON layer with specific style
+var maderaLayer = new L.GeoJSON.AJAX("script/geojson/Madera.json", {
     style: function(feature) {
-        return { color: "#ff7800", weight: 2 };
+        return { color: "#FF5733", weight: 2 }; // Style for Madera (orange color)
     }
 }).addTo(map);
 
-// You can load more layers if you have multiple boundaries
-var geojsonLayer2 = new L.GeoJSON.AJAX("script/geojson/another-boundary.geojson", {
+// Load Merced county GeoJSON layer with a different style
+var mercedLayer = new L.GeoJSON.AJAX("script/geojson/Merced.json", {
     style: function(feature) {
-        return { color: "#0074D9", weight: 2 };
+        return { color: "#3388FF", weight: 2 }; // Style for Merced (blue color)
     }
 }).addTo(map);
 
